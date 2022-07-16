@@ -51,6 +51,18 @@ window.addEventListener('load', function(){
     }
 
     class Game {
-
+        constructor(width, height){
+            this.width = width;
+            this.height = height;
+            this.player = new Player(this);
+        }
+        update(){
+            this.player.update();
+        }
+        draw(){
+            this.player.draw(context);
+        }
     }
+
+    const game = new Game(canvas.width, canvas.height);
 });
