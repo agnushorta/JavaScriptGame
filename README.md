@@ -122,6 +122,7 @@ window.addEventListener('load', function(){
 
 *CONSTRUCTOR* on JavaScript class is a special type of method, that will run once when we instanttiate the class using the new keyword. It will create one new blank object and it will give it values and properties as deined inside the blueprint here.
 
+*script.js*
 ```javascript
  class Player {
         constructor(game){
@@ -150,12 +151,15 @@ window.addEventListener('load', function(){
         update(){
             this.player.update();
         }
-        draw(){
+        draw(context){
             this.player.draw(context);
         }
     }
 
     const game = new Game(canvas.width, canvas.height);
-    ```
 
-    ## Lesson V - Animation Loop (13:00)
+```
+
+ ## Lesson V - Animation Loop (13:00)
+
+ **requestAnimationFrame()** tells the browser that we wish to perform an animation and it requests that the browser calls a specified function to update an animation before the next repaint.
