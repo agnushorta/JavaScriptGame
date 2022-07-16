@@ -59,7 +59,7 @@ window.addEventListener('load', function(){
         update(){
             this.player.update();
         }
-        draw(){
+        draw(context) {
             this.player.draw(context);
         }
     }
