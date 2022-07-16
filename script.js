@@ -1,4 +1,4 @@
-window.addEventListener('load', function(){
+window.addEventListener('load', function () {
     // cavas setup
     const canvas = document.getElementById('canvas1');
     const ctx = canvas.getContext('2d');
@@ -18,19 +18,19 @@ window.addEventListener('load', function(){
     }
 
     class Player {
-        constructor(game){
+        constructor(game) {
             this.game = game;
             this.width = 120;
             this.height = 190;
             this.x = 20;
             this.y = 100;
-            this.speedY = 0;
+            this.speedY = 1;
         }
-        update(){
+        update() {
             this.y += this.speedY;
         }
-        draw(context){
-            context.fillRect(this.x, this.y, this. width, this.height);
+        draw(context) {
+            context.fillRect(this.x, this.y, this.width, this.height);
         }
     }
 
@@ -38,11 +38,11 @@ window.addEventListener('load', function(){
 
     }
 
-    class Layer{
+    class Layer {
 
     }
 
-    class Background{
+    class Background {
 
     }
 
@@ -51,12 +51,12 @@ window.addEventListener('load', function(){
     }
 
     class Game {
-        constructor(width, height){
+        constructor(width, height) {
             this.width = width;
             this.height = height;
             this.player = new Player(this);
         }
-        update(){
+        update() {
             this.player.update();
         }
         draw(context) {
